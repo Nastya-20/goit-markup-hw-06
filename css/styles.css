@@ -39,19 +39,26 @@ body {
     background-color: #fff;
 }
 
-.page-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 .container {
-    max-width: 1158px;
+    /* max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    max-width: 320px;
+    padding: 0 16px;
+    margin: 0;
 }
-
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -60,6 +67,7 @@ body {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-navigation {
@@ -75,9 +83,10 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* margin-right: 76px; */
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+    padding: 16px 0;
 }
 
 .web-studio {
@@ -90,8 +99,9 @@ body {
 }
 
 .header-menu {
-    display: flex;
-    gap: 40px;
+    /* display: flex;
+    gap: 40px; */
+    display: none;
 }
 
 .header-menu-title {
@@ -133,12 +143,13 @@ body {
 .contact-address {
     font-style: normal;
     margin-left: auto;
+    display: none;
 }
 
-.contact-address-list {
+/* .contact-address-list {
     display: flex;
-    gap: 40px;
-}
+    gap: 40px; 
+} */
 
 .contact-link {
     color: #434455;
@@ -153,10 +164,96 @@ body {
 .contact-link:focus {
     color: #404bbf;
 }
+.open-menu-btn {
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+@media screen and (min-width: 768px) {
+    .open-menu-btn {
+        display: none;
+    }  
+    .logo {
+        margin-right: 120px;
+    }
+    .header-menu {
+        display: flex;
+        gap: 40px;
+    }
+    .header-menu-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        text-transform: none;
+        padding: 24px 0;
+        display: flex;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .header-menu li:nth-child(1) .current {
+        position: relative;
+        color: #404bbf;
+    }
+    
+    .current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color: #404BBF;
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+    }
+    
+    .header-menu .header-menu-title:hover,
+    .header-menu .header-menu-title:focus {
+        color: #404bbf;
+     }
+    
+    .header-menu .header-menu-title:active {
+        color: #404bbf;
+    }
+    .contact-address {
+        display: block;
+    }
+    .contact-address-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .contact-link {
+        color: #434455;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
 
+@media screen and (min-width: 1158px) {
+    .logo {
+        margin-right: 76px;
+    }
+    .contact-address-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .contact-link {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
 .firstsect {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-bg.jpg);
-    max-width: 1440px;
+    max-width: 1440px; 
+    max-width: 320px;
+    max-height: 432px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat, no-repeat;
@@ -209,8 +306,10 @@ button:focus {
 }
 
 .secondsect {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -228,15 +327,19 @@ button:focus {
 
 .container-plan {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+    /* gap: 24px; */
 }
 
 .secondsect-item {
-    width: calc((100% - 3 * 24px) / 4);
+    /* width: calc((100% - 3 * 24px) / 4); */
+    width: 100%;
 }
 
 .plan-icons {
-    display: flex;
+    display: none;
+    /* display: flex;
     width: 264px;
     height: 112px;
     align-items: center;
@@ -244,30 +347,84 @@ button:focus {
     border-radius: 4px;
     border: 1px solid #8e8f99;
     background-color: #f4f4fd;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
 }
 
-.icon-link {
+/* .icon-link {
     fill: transparent;
     height: 64px;
     width: 64px;
-}
+} */
 
 .plan-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
+    /* font-weight: 500; */
+    /* font-size: 20px; */
+    /* line-height: 120%; */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .plan-content {
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    /* color: #434455; */
     color: #434455;
+}
+@media screen and (min-width: 768px) {
+    .container-plan {
+        gap: 24px;
+    }
+    .secondsect-item {
+     width: calc((100% - 24px) / 2);
+    }
+   
+       
+}
+@media screen and (min-width: 1158px) {
+    .secondsect {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+        .container-plan {
+            gap: 24px;
+        }
+    .secondsect-item {
+         width: calc((100% - 3 * 24px) / 4);
+     }
+     .plan-icons {
+         display: flex;
+        width: 264px;
+        height: 112px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border: 1px solid #8e8f99;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+         }
+    
+    .icon-link {
+        fill: transparent;
+        height: 64px;
+        width: 64px;
+    }
+    .plan-title {
+        font-weight: 500; 
+        font-size: 20px;
+        line-height: 120%;
+    }
+    .plan-content {
+        font-weight: 400;
+        color: #434455;
+    }
 }
 
 .thirdsect {

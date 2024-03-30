@@ -44,6 +44,7 @@ body {
     max-width: 320px;
     padding: 0 16px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) {

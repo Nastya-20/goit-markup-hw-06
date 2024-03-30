@@ -785,23 +785,26 @@ button:focus {
 
 .page-footer {
     display: flex;
+    padding: 92px 0;
     /* padding: 100px 0; */
-    padding: 96px 0;
+    /* padding: 96px 0; */
     background-color: #2e2f42;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    text-align: left;
 }
 
 .footer-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 72px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-between; */
+}
+
+.footer-container-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .logo-footer {
@@ -812,9 +815,9 @@ button:focus {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: inline-block;
-    margin-bottom: 16px;
-
+    /* display: inline-block; */
+    text-align: center;
+    /* margin-bottom: 16px; */
 }
 
 /* .footer-container-logo {
@@ -827,7 +830,19 @@ button:focus {
 
 .page-footer-text {
     text-align: left;
-    max-width: 264px;
+    max-width: 288px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    /* max-width: 264px; */
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footer-social-text {
@@ -836,7 +851,8 @@ button:focus {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+    text-align: center;
 }
 
 .footer-social {
@@ -871,7 +887,10 @@ button:focus {
 }
 
 .email-input {
-    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* margin-left: 80px; */
 }
 
 .email-title {
@@ -880,20 +899,25 @@ button:focus {
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #fff;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
+    text-align: center;
 }
 
 .footer-form {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
+    /* align-items: center;
+    justify-content: space-between; */
+    /* gap: 24px; */
 }
 
 .footer-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    /* width: 264px; */
+    width: 288px;
     height: 40px;
     background-color: transparent;
     font-size: 12px;
@@ -903,6 +927,7 @@ button:focus {
     padding-left: 16px;
     padding-right: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.3;
 }
 
 .footer-input::placeholder {
@@ -911,6 +936,7 @@ button:focus {
     line-height: 200%;
     letter-spacing: 0.04em;
     color: #ffffff;
+    opacity: 0.6;
 }
 
 .footer-form-btn {
@@ -933,8 +959,16 @@ button:focus {
     cursor: pointer;
 }
 
-.plane-icon {
+/* .plane-icon {
     margin-left: 16px;
+} */
+@media screen and (min-width: 768px) {
+    .page-footer {
+        padding: 96px 0;
+
+    }
+
+
 }
 
 .modal-overlay {

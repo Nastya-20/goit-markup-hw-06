@@ -358,6 +358,7 @@ body {
 }
 
 .firstsect {
+    width: 320px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/people-office-bg-mob.jpg);
@@ -424,6 +425,7 @@ button:focus {
 
 @media screen and (min-width: 768px) {
     .firstsect {
+        width: 768px;
         padding: 72px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -448,6 +450,7 @@ button:focus {
 
 @media screen and (min-width: 1158px) {
     .firstsect {
+        width: 1158px;
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -485,7 +488,7 @@ button:focus {
 
 .container-plan {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 72px;
 }
 
@@ -510,15 +513,16 @@ button:focus {
 .plan-content {
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
 
 @media screen and (min-width: 768px) {
     .container-plan {
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 72px 24px;
-        align-content: flex-end;
     }
 
     .secondsect-item {
@@ -686,9 +690,11 @@ button:focus {
 
     .thirdsect-container {
         width: 584px;
+        padding: 0 16px;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 64px 24px;
+        margin: 0 auto;
     }
 
     .img {
@@ -698,7 +704,6 @@ button:focus {
 
 @media screen and (min-width: 1158px) {
     .thirdsect {
-        flex-direction: column;
         padding: 120px 0;
     }
 
@@ -775,6 +780,7 @@ button:focus {
     line-height: 120%;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .card-content {
@@ -808,7 +814,7 @@ button:focus {
     }
 
     .portfolio-list {
-        flex-direction: unset;
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 72px 24px;
     }
@@ -999,6 +1005,7 @@ button:focus {
         width: 584px;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: baseline;
         gap: 72px 24px;
     }
 
@@ -1020,7 +1027,7 @@ button:focus {
     }
 
     .footer-form {
-        flex-direction: unset;
+        flex-direction: row;
         gap: 24px;
     }
 
@@ -1299,6 +1306,7 @@ button:focus {
         top: 50%;
         left: 50%;
         width: 408px;
+        transform: translate(-50%, -50%);
         min-height: 584px;
         padding: 72px 24px 24px 24px;
     }

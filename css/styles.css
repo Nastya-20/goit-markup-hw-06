@@ -358,7 +358,6 @@ body {
 }
 
 .firstsect {
-    width: 320px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/people-office-bg-mob.jpg);
@@ -425,7 +424,6 @@ button:focus {
 
 @media screen and (min-width: 768px) {
     .firstsect {
-        width: 768px;
         padding: 72px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -450,7 +448,6 @@ button:focus {
 
 @media screen and (min-width: 1158px) {
     .firstsect {
-        width: 1158px;
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),

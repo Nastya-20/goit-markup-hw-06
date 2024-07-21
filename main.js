@@ -21,7 +21,7 @@ scrollToTopBtn.addEventListener('click', () => {
 // Закриття та відкриття мобильного меню
 const mobMenu = document.querySelector('.mob-menu');
 const openModalBtn = document.querySelector('.open-menu-btn');
-const closeModalBtn = document.querySelector('.button-modal-close');
+const closeModalBtn = document.querySelector('.close-menu-btn ');
 
 function openMenu(menu) {
     console.log('Opening menu:', menu);

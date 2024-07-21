@@ -1023,7 +1023,7 @@ button:focus {
     right: 5px;
     width: 40px;
     height: 40px;
-    background-color: #404BBF;
+    background-color: #d6d7e0;
     color: white;
     border: 1px solid #FBFBFB;
     border-radius: 50%;
@@ -1035,7 +1035,11 @@ button:focus {
 }
 
 .scroll-to-top:hover {
-    background-color: #404bbf;
+    background-color: #babef3;
+}
+/* Скрытие скролла */
+body.no-scroll {
+    overflow: hidden;
 }
 @media screen and (min-width: 768px) {
     .page-footer {
@@ -1079,12 +1083,12 @@ button:focus {
     .footer-social-media {
         align-items: baseline;
     }
-        .scroll-to-top {
-            width: 45px;
-            height: 45px;
-            bottom: 10px;
-            right: 10px;
-        }
+     .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+        right: 10px;
+     }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1107,11 +1111,11 @@ button:focus {
     .email-title {
         text-align: left;
     }
-        .scroll-to-top {
-            width: 50px;
-            height: 50px;
+    .scroll-to-top {
+        width: 50px;
+        height: 50px;
     
-        }
+    }
 }
 
 .modal-overlay {

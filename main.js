@@ -22,6 +22,7 @@ scrollToTopBtn.addEventListener('click', () => {
 const mobMenu = document.querySelector('.mob-menu');
 const openModalBtn = document.querySelector('.open-menu-btn');
 const closeModalBtn = document.querySelector('.close-menu-btn ');
+const body = document.querySelector('body');
 
 function openMenu(menu) {
     console.log('Opening menu:', menu);
@@ -44,7 +45,7 @@ const modalForm = document.querySelector('.modal');
 const openOrderServiceButton = document.querySelector('.button');
 const closeOrderServiceButton = document.querySelector('.button-modal-close');
 const modalOverlay = document.querySelector('.modal-overlay');
-const body = document.querySelector('body');
+
 
 function openForm() {
   console.log('Opening form');

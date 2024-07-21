@@ -72,5 +72,20 @@ modalOverlay.addEventListener('click', (event) => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const menuItems = document.querySelectorAll('.header-menu-title');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault(); // Предотвращает переход по ссылке
+
+      // Удаляем класс 'current' у всех элементов
+      menuItems.forEach(el => el.classList.remove('current'));
+
+      // Добавляем класс 'current' к текущему элементу
+      item.classList.add('current');
+    });
+  });
+});
 
 
